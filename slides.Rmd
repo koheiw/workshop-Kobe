@@ -386,7 +386,7 @@ table(data$document, data$token)
 
 ##quantedaについて
 
-- Ken Benoitが2013頃からEUに支援されて開発を始めた量的テキスト分析のためのRパッケージ
+- Kenneth Benoitが2013頃からEUに支援されて開発を始めた量的テキスト分析のためのRパッケージ
 - 名称は**qu**antetative **an**alysis of **te**xtual **da**taに由来する
 - 量的テキスト分析のための多数の関数を含んでいる
     - 関数の一覧は<https://docs.quanteda.io/reference>で参照できる
@@ -397,7 +397,7 @@ table(data$document, data$token)
     - ユニコードに準拠し，中国語や日本語，韓国語の文書も処理できる
     - 欧米の主導的な政治家科学者の間で利用されており，アジアでも利用者が増えつつある
 
-## quantedaの開発者
+## 開発チーム
 
 ```{r echo=FALSE, out.height="500px", out.width="auto"}
 knitr::include_graphics("assets/team.png")

@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,500);
+@import url('http://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+@import url('http://fonts.googleapis.com/css?family=Roboto:400,500');
 
 body {
     font-family: 'Noto Sans Japanese', 'Roboto', sans-serif; 
@@ -7,7 +7,6 @@ body {
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Noto Sans Japanese', 'Roboto', sans-serif; 
-    font-weight: 500;
     word-break: keep-all;
 }
 
