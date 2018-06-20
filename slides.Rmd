@@ -1,6 +1,6 @@
 ---
 title: "量的テキスト分析入門"
-subtitle: "計量政治学方法論１"
+subtitle: "計量政治学方法論２"
 author: "渡辺耕平"
 date: "2018年6月28日"
 output: 
