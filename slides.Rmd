@@ -15,6 +15,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r include=FALSE}
 require(quanteda)
+require(quanteda.corpora)
+quanteda_options(threads = 8)
 ```
 
 #本講座について
@@ -60,13 +62,13 @@ require(quanteda)
 
 ###第2日目
 
-- 実習２（90分）
-- 実習３（90分）
+- 実習２: 基本オブジェクトに対する操作および日本語処理の習得（90分）
+- 実習３: 文書データの統計的な分析法の習得（90分）
 
 ###第3日目
 
-- 作業（180分）
-- 発表（90分）
+- 作業: ２から３人のグループによる小規模な分析プロジェクト（180分）
+- 発表: プロジェクトの結果の発表（90分）
 
 ##注意点
 
@@ -167,6 +169,46 @@ require(quanteda)
     - 高次（言説，語用）
 - 高次の言語現象を分析するのための手法は，人が言語を理解する方法とは必ずしも一致しない
     - 複雑な統計的な学習モデルを用いる必要は無い
+    
+##低次の言語現象
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+#corp <- download("data_corpus_guardian")
+corp <- readRDS("/home/kohei/Dropbox/Public/data_corpus_guardian2016-10k.rds")
+toks <- tokens(corp, remove_punct = TRUE, remove_numbers = TRUE, remove_url = TRUE) 
+toks <- tokens_remove(toks, c("*-time", "*updated-*", "gmt", "bst", "photograph"))
+toks <- tokens_remove(toks, stopwords("en"), min_nchar = 2, padding = TRUE)
+```
+
+```{r echo=FALSE, fig.height=4.5, fig.width=10, cache=TRUE}
+local({
+    news_fcm <- 
+        toks %>% 
+        tokens_tolower() %>% 
+        fcm("window", window = 2)
+    feat <- names(topfeatures(news_fcm, 50))
+    fcm_select(news_fcm, feat) %>% 
+    textplot_network(min_freq = 0.85, edge_size = 6, edge_color = "skyblue") + 
+        ggplot2::theme_void()
+})
+```
+
+##高次の言語現象
+
+```{r echo=FALSE, fig.height=4.5, fig.width=10, cache=TRUE}
+local({
+    col <- textstat_collocations(toks, min_count = 100, tolower = FALSE)
+    toks <- tokens_compound(toks, col[col$z > 3])
+    news_dfm <- 
+        dfm(toks) %>% 
+        dfm_trim(min_termfreq = 100, max_docfreq = 0.1, docfreq_type = "prop")
+    news_fcm <- fcm(news_dfm)
+    feat <- names(topfeatures(news_fcm, 50))
+    fcm_select(news_fcm, feat) %>% 
+    textplot_network(min_freq = 0.85, edge_size = 6, edge_color = "skyblue") +
+        ggplot2::theme_void()
+})
+```
 
 ##内容分析とテキスト分析
 
