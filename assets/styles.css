@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Noto Sans Japanese', 'Roboto', sans-serif; 
-    font-weight: 300;
+    font-weight: normal;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Noto Sans Japanese', 'Roboto', sans-serif; 
@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 b, strong, th {
-    font-weight: 500;
+    font-weight: bold;
 }
 
 li li {
