@@ -6,10 +6,9 @@ Materials for Kore workshop 2018
 
 Supplementary materials
 
-- [Change locale of Windows](https://koheiw.net/?p=490)
+- [Blog post on how to change locale of Windows](https://koheiw.net/?p=490)
+- [An example scraper for static websites](./scraper.R)
 - [Presentation scoring sheet](https://docs.google.com/document/d/14Q5z5gSLVQmJvQKMolokjc40YlorTtQEE-WxuwyyLRw/edit?usp=sharing)
-- [An example scraper for static website](./scraper.R)
-
 
 Datasets
 - Tweets collected prior to the Japan’s 2017 general election 2017 with a keyword “選挙” [:page_facing_up:](https://docs.quanteda.io/articles/pkgdown/examples/japanese_twitter_ja.html) [:file_folder:](https://www.dropbox.com/s/co12wpj08pzqz71/data_corpus_election2017tweets.rds)
