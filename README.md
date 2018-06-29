@@ -7,7 +7,8 @@ Materials for Kore workshop 2018
 Supplementary materials
 
 - [Blog post on how to change locale of Windows](https://koheiw.net/?p=490)
-- [An example scraper for static websites](./scraper.R)
+- [Blog post on how to use NYT API](https://koheiw.net/?p=643)
+- [Example scraper for static websites](./scraper.R)
 - [Presentation scoring sheet](https://docs.google.com/document/d/14Q5z5gSLVQmJvQKMolokjc40YlorTtQEE-WxuwyyLRw/edit?usp=sharing)
 
 Datasets
