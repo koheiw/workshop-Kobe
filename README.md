@@ -17,4 +17,5 @@ Datasets
 - 16,401 full-text news articles on politics about from 2016 by Asahi Shimbun [:file_folder:](https://www.dropbox.com/s/6nxn0km3u3xvsub/data_corpus_asahi2016.rds)
 - 10,000 full-text news articles randomly sampled from 2016 by the Guardian [:page_facing_up:](https://github.com/koheiw/LSS) [:file_folder:](https://www.dropbox.com/s/kfhdoifes7z7t6j/data_corpus_guardian2016-10k.rds)
 - Chinese government reports 2017 [:page_facing_up:](https://docs.quanteda.io/articles/pkgdown/examples/chinese.html) [:file_folder:](https://www.dropbox.com/s/37ojd5knz1qeyul/data_corpus_chinesegovreport.rds)
+- Yahoo News articles and comments about Korea and the Koreans [:page_facing_up:](https://1drv.ms/b/s!AnEkIea2cHXzgbZKSyYhJrTICmfUGw) [:file_folder:](https://www.dropbox.com/s/9pumks2q8mkid5n/data_corpus_articles.RDS?dl=0) [:file_folder:](https://www.dropbox.com/s/zztt7rjjngs7ein/data_corpus_comments.RDS?dl=0)
 
